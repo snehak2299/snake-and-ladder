@@ -9,6 +9,12 @@ public class SnakeLadder{
 	  int lowerbound=1;
     int upperbound=3;
     while(position<=100){
+    if(position==100){
+     position= position;
+     System.out.println("100 reached");
+     break;
+	}
+    else{
     int option = (int)(Math.random() * ((upperbound - lowerbound) + 1)) + lowerbound;
     //System.out.println(option);
     switch(option){
@@ -32,8 +38,10 @@ public class SnakeLadder{
 	  }
     }
     }
+    
+    }
   
-   System.out.println(position);
+    System.out.println(position);
     
       
 	}
