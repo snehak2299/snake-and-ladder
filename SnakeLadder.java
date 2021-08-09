@@ -8,11 +8,16 @@ public class SnakeLadder{
 	  System.out.println("random value genrated for dies is:" + randomDiesNumber);
 	  int lowerbound=1;
     int upperbound=3;
+    while(position<=100){
     int option = (int)(Math.random() * ((upperbound - lowerbound) + 1)) + lowerbound;
-    System.out.println(option);
+    //System.out.println(option);
     switch(option){
   	  case 1:{
        System.out.println("no play");
+       if(position<=0){
+        position=0;
+        System.out.println("restart your game");
+	   }
        break;
 	  }
       case 2:{
@@ -25,7 +30,7 @@ public class SnakeLadder{
        position=position-randomDiesNumber;
        break;
 	  }
-
+    }
     }
   
    System.out.println(position);
